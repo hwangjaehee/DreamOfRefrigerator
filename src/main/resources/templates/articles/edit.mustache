@@ -1,0 +1,24 @@
+{{>layouts/header}}
+{{#article}}
+    <form class="container" action="/articles/update" method="post">
+        <input name="articleId" type="hidden" value="{{articleId}}" />
+        <div class="mb-3">
+            <label class="form-label">제목</label>
+            <input type="text" class="form-control" name="title" value="{{title}}">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">날짜</label>
+            <textarea class="form-control" rows="3" name="date">{{date}}</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">오늘 일어난 일</label>
+            <textarea class="form-control" rows="3" name="contents">{{contents}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/articles/{{articleId}}">Back</a>
+    </form>
+{{/article}}
+
+{{>layouts/footer}}

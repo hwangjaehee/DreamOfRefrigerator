@@ -1,0 +1,26 @@
+{{>layouts/header}}
+<!--action:어디로, method:어떻게-->
+<form class="container" action="/articles/create" method="post">
+
+    <div class="mb-3">
+        <label class="form-label">제목</label>
+        <!-- 입력값: title -->
+        <input type="text" class="form-control" name="title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">날짜</label>
+        <!-- 입력값: date -->
+        <input type="text" class="form-control" name="date">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">오늘 일어난 일</label>
+        <!-- 입력값: contents -->
+        <textarea class="form-control" rows="3" name="contents"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">등록</button>
+    <a href="/diary">뒤로가기</a>
+</form>
+
+{{>layouts/footer}}
